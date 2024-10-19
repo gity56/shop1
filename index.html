@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Ralph Lauren | Slimani Heithem Teissir</title>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a class="logo" href="">Ralph Lauren</a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Man</a></li>
+                <li><a href="#">Woman</a></li>
+                <li><a href="#">Kids</a></li>
+            </ul>
+        </nav>
+        <div class="contenu">
+            <div class="text">
+                <h2>Ralph Lauren</h2>
+                <p>Timeless luxury meets classic style. Explore our curated collection of apparel, accessories, and home décor inspired by Ralph Lauren’s iconic elegance.</p>
+            </div>
+            <div class="img">
+                <img src="soubhanaallah.png" alt="Ralph Lauren Collection">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const textElement = document.querySelector('.contenu .text p');
+            const text = textElement.textContent;
+            textElement.textContent = '';
+            
+            let index = 0;
+            function type() {
+                if (index < text.length) {
+                    textElement.textContent += text.charAt(index);
+                    index++;
+                    setTimeout(type, 50); // Adjust the typing speed here
+                }
+            }
+            type();
+        });
+    </script>
+</body>
+</html>
